@@ -25,7 +25,7 @@ class Employee:
         else:
             text +=(f"contract of {self.hours} at {self.hourlyWage}/hour")
         if self.commisson !=0:
-            text +=(f" and receives a commission for {self.contracts}(s) at {self.contractWage}/contract")
+            text +=(f" and receives a commission for {self.contracts}contract(s) at {self.contractWage}/contract")
         if self.bonus !=0:
             text +=(f" and receives a bonus commission of {self.bonus}")
         text +=(f". Their total pay is {self.get_pay()}")
