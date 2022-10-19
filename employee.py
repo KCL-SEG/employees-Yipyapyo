@@ -3,7 +3,7 @@
 
 class Employee:
     def __init__(self, name, monthlyWage = 0, hours = 0, hourlyWage = 0, contracts = 0, contractWage = 0, bonus = 0):
-        self.name = name
+        self.name = name.capitalize()
         self.monthlyWage = monthlyWage
         self.hours = hours
         self.hourlyWage = hourlyWage
@@ -33,7 +33,7 @@ class Employee:
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = Employee('Billie', monthlyWage = 4000)
-
+billie.str()
 # Charlie works on a contract of 100 hours at 25/hour.  Their total pay is 2500.
 charlie = Employee('Charlie', hours = 100, hourlyWage = 25)
 
