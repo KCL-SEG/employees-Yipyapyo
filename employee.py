@@ -1,26 +1,35 @@
 """Employee pay calculator."""
 """ENTER YOUR SOLUTION HERE!"""
 
-from calendar import month
-
-
 class Employee:
     def __init__(self, name, monthlyWage = 0, hours = 0, hourlyWage = 0, contracts = 0, contractWage = 0, bonus = 0):
         self.name = name
         self.monthlyWage = monthlyWage
         self.hours = hours
         self.hourlyWage = hourlyWage
+        self.contracts = contracts
+        self.contractWage = contractWage
         self.commisson = contracts * contractWage
         self.bonus = bonus
 
     def get_pay(self):
+        global totalPay
         totalPay = self.monthlyWage + (self.hours * self.hourlyWage) + self.commisson + self.bonus
         print(totalPay)
         return totalPay
 
     def __str__(self):
-        return self.name
-
+        text = f"{self.name} works on a "
+        if self.monthlyWage !=0:
+            text +=(f"monthly salary of {self.monthlyWage}")
+        else:
+            text +=(f"contract of {self.hours} at {self.hourlyWage}/hour")
+        if self.commisson !=0:
+            text +=(f" and receives a commission for {self.contracts}(s) at {self.contractWage}/contract")
+        if self.bonus !=0:
+            text +=(f" and receives a bonus commission of {self.bonus}")
+        text +=(f". Their total pay is {self.get_pay()}")
+        print(text)
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
 billie = Employee('Billie', monthlyWage = 4000)
