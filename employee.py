@@ -18,7 +18,7 @@ class Employee:
         print(totalPay)
         return totalPay
 
-    def __str__(self):
+    def str(self):
         text = f"{self.name} works on a "
         if self.monthlyWage !=0:
             text +=(f"monthly salary of {self.monthlyWage}")
