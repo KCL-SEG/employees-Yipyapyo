@@ -9,7 +9,7 @@ def test_billie():
     string = str(billie)
     regex = '^Billie works on a monthly salary of 4000.\s+Their total pay is 4000.$'
     assert re.match(regex, string)
-
+    
 def test_charlie():
     assert charlie.get_pay() == 2500
     string = str(charlie)
@@ -39,3 +39,4 @@ def test_ariel():
     string = str(ariel)
     regex = '^Ariel works on a contract of 120 hours at 30/hour and receives a bonus commission of 600.\s+Their total pay is 4200.$'
     assert re.match(regex, string)
+
