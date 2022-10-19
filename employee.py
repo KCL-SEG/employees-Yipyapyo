@@ -23,7 +23,7 @@ class Employee:
         if self.monthlyWage !=0:
             text +=(f"monthly salary of {self.monthlyWage}")
         else:
-            text +=(f"contract of {self.hours} at {self.hourlyWage}/hour")
+            text +=(f"contract of {self.hours} hours at {self.hourlyWage}/hour")
         if self.commisson !=0:
             text +=(f" and receives a commission for {self.contracts}contract(s) at {self.contractWage}/contract")
         if self.bonus !=0:
