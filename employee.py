@@ -27,7 +27,7 @@ class Employee:
             text +=(f" and receives a commission for {self.contracts} contract(s) at {self.contractWage}/contract")
         if self.bonus !=0:
             text +=(f" and receives a bonus commission of {self.bonus}")
-        text +=(f". Their total pay is {self.get_pay()}")
+        text +=(f". Their total pay is {self.get_pay()}.")
         print(text)
 
 # Billie works on a monthly salary of 4000.  Their total pay is 4000.
